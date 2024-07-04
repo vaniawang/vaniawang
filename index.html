@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanyi Wang - AI Engineer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: linear-gradient(to right, #6aa0c5, #bc99c7);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #f7f7f7;
+            padding: 10px;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #6aa0c5;
+            font-weight: bold;
+        }
+        section {
+            display: none;
+            padding: 20px;
+        }
+        section.active {
+            display: block;
+        }
+        .content {
+            max-width: 800px;
+            margin: auto;
+        }
+        .title {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #6aa0c5;
+        }
+        .subsection {
+            margin-bottom: 20px;
+        }
+        .skills-list, .projects-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .skills-list li, .projects-list li {
+            background-color: #e0f7fa;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .skills-list li:hover, .projects-list li:hover {
+            background-color: #b2ebf2;
+        }
+        footer {
+            background: linear-gradient(to right, #bc99c7, #6aa0c5);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <script>
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('section');
+            pages.forEach(page => {
+                if (page.id === pageId) {
+                    page.classList.add('active');
+                } else {
+                    page.classList.remove('active');
+                }
+            });
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            showPage('about-contact');
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Wanyi Wang</h1>
+        <p>AI Engineer</p>
+    </header>
+    <nav>
+        <a href="javascript:void(0);" onclick="showPage('about-contact')">About & Contact</a>
+        <a href="javascript:void(0);" onclick="showPage('projects')">Projects</a>
+        <a href="javascript:void(0);" onclick="showPage('skills')">Skills</a>
+    </nav>
+    <section id="about-contact" class="active">
+        <div class="content">
+            <div class="subsection">
+                <h2 class="title">About Me</h2>
+                <p>I am Wanyi Wang, an AI Engineer with a strong passion for advancing the field of artificial intelligence. I am actively seeking opportunities to pursue a PhD and am open to all areas related to AI. During my master's studies, I worked on various projects including AI protein structure generation, target prediction, omics analysis, and participated in research on RNA-seq structure prediction and chemical reactivity algorithms. My diverse experience in these areas has equipped me with a robust skill set and a deep understanding of AI applications.</p>
+            </div>
+            <div class="subsection">
+                <h2 class="title">Contact</h2>
+                <p>Email: <a href="mailto:vaniawang99@gmail.com">vaniawang99@gmail.com</a></p>
+            </div>
+        </div>
+    </section>
+    <section id="projects">
+        <div class="content">
+            <div class="subsection">
+                <h2 class="title">Projects</h2>
+                <ul class="projects-list">
+                    <li>AI Protein Structure Generation</li>
+                    <li>Target Prediction</li>
+                    <li>Omics Analysis</li>
+                    <li>RNA-seq Structure Prediction</li>
+                    <li>Chemical Reactivity Algorithms</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="skills">
+        <div class="content">
+            <div class="subsection">
+                <h2 class="title">Skills</h2>
+                <ul class="skills-list">
+                    <li>AIDD</li>
+                    <li>LLM-Infer</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Wanyi Wang</p>
+    </footer>
+</body>
+</html>
